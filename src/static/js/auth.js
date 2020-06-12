@@ -2,7 +2,7 @@
 var PetLogin_SETTINGS = {
   clientId: "000001"
 };
-var PetLogin = new PetLoginSignIn({
+var PetLogin = new Object() ({
   clientId: PetLogin_SETTINGS.clientId
 });
 
