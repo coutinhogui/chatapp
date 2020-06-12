@@ -2,9 +2,9 @@
 var PetLogin_SETTINGS = {
   clientId: "000001"
 };
-var PetLogin = new Object() ({
-  clientId: PetLogin_SETTINGS.clientId
-});
+var PetLogin = new Object(),
+  clientId = PetLogin_SETTINGS.clientId;
+
 
 // Render the login form.
 function showLogin() {
