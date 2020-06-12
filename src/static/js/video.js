@@ -6,7 +6,7 @@ function getRoom() {
     return (location.search && decodeURIComponent(query.split("=")[1]));
   }
 
-  return okta.tokenManager.get("idToken").claims.email;
+  return "teste";
 }
 
 // Retrieve the absolute room URL.

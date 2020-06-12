@@ -13,6 +13,12 @@ var okta = new OktaSignIn({
     display: "page"
   }
 });
+var PetLogin_SETTINGS = {
+  clientId: "000001"
+};
+var PetLogin = new PetLoginSignIn({
+  clientId: PetLogin_SETTINGS.clientId
+});
 
 // Render the login form.
 function showLogin() {
@@ -31,8 +37,9 @@ function hasQueryString() {
 // Handle the user's login and what happens next.
 function handleLogin() {
   // If the user is logging in for the first time...
-  if (okta.token.hasTokensInUrl()) {
-    okta.token.parseTokensFromUrl(
+  if (PetLogin.clientId == "000001") {
+    window.location = getRoomURL();
+     /*okta.token.parseTokensFromUrl(
       function success(res) {
         // Save the tokens for later use, e.g. if the page gets refreshed:
         okta.tokenManager.add("accessToken", res[0]);
@@ -43,9 +50,9 @@ function handleLogin() {
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
       }
-    );
+    ); */
   } else {
-    okta.session.get(function(res) {
+    /*okta.session.get(function(res) {
 
       // If the user is logged in, display the app.
       if (res.status === "ACTIVE") {
@@ -69,6 +76,6 @@ function handleLogin() {
       } else {
         showLogin();
       }
-    });
+    });*/
   }
 }
