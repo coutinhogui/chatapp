@@ -1,18 +1,4 @@
-var OKTA_SETTINGS = {
-  baseUrl: "https://dev-111464.oktapreview.com",
-  clientId: "0oaejf8gmll1TiDRz0h7",
-  issuer: "https://dev-111464.oktapreview.com/oauth2/default"
-};
 
-var okta = new OktaSignIn({
-  baseUrl: OKTA_SETTINGS.baseUrl,
-  clientId: OKTA_SETTINGS.clientId,
-  authParams: {
-    issuer: OKTA_SETTINGS.issuer,
-    responseType: ["token", "id_token"],
-    display: "page"
-  }
-});
 var PetLogin_SETTINGS = {
   clientId: "000001"
 };
