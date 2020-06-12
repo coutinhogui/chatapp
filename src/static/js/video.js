@@ -26,7 +26,7 @@ function enableVideo() {
 function loadSimpleWebRTC() {
   var script = document.createElement("script");
   //script.src = "https://simplewebrtc.com/latest-v3.js";
-  script.src = "/static/js/webCam.js";
+  script.src = "https://cdn.jsdelivr.net/npm/simplewebrtc@3.0.2/src/simplewebrtc.min.js";
   document.head.appendChild(script);
 
   script.onload = function() {
