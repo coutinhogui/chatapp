@@ -2,10 +2,11 @@
 var PetLogin_SETTINGS = {
   clientId: "000001"
 };
-var PetLogin = new Object(),
-  clientId = PetLogin_SETTINGS.clientId;
+var PetLogin = new LoginPetCam(PetLogin_SETTINGS.clientId);
 
-
+function LoginPetCam(clientId, modelo, ano) {
+  this.clientId = clientId;
+}
 // Render the login form.
 function showLogin() {
   okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
