@@ -25,7 +25,7 @@ function hasQueryString() {
 function handleLogin() {
   // If the user is logging in for the first time...
   if (PetLogin.clientId == "000001") {
-    window.location = getRoomURL();
+    //window.location = getRoomURL();
      /*okta.token.parseTokensFromUrl(
       function success(res) {
         // Save the tokens for later use, e.g. if the page gets refreshed:
